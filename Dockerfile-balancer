@@ -1,0 +1,10 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+RUN pip3 install --no-cache-dir redis requests flask
+
+COPY ./balancer.py ./balancer.py
+
+EXPOSE 65432
+ENTRYPOINT ["python", "balancer.py"]

@@ -1,0 +1,1 @@
+print(hash("19384hvnozs") % 2)

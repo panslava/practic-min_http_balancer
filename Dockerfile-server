@@ -1,0 +1,9 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+RUN pip3 install --no-cache-dir pymongo flask
+
+COPY ./server.py ./server.py
+
+ENTRYPOINT ["python", "server.py"]
